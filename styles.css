@@ -1,0 +1,20 @@
+
+.banner {
+    background-image: url("https://media.tenor.com/DBL4Q4H7pJ8AAAAM/cat-scary.gif"); /* Replace with your image URL */
+    background-size: cover; /* Ensure the image covers the area */
+    background-position: center; /* Center the image */
+    height: 250px; /* Set height for the banner */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    color: white; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional text shadow for better readability */
+}
+
+.side-banner {
+    background-image: url("https://media.tenor.com/DBL4Q4H7pJ8AAAAM/cat-scary.gif"); /* Replace with your image URL */
+    background-size: cover; /* or use 'contain' based on your needs */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    height: 100vh; /* Set the height of the banner */
+}

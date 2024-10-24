@@ -5,91 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-      <div class="container d-flex flex-column algin-items-center">
-        <div class="container d-flex justify-content-center">
-          <a class="navbar-brand" href="#"><h1>Instagram</h1></a>
-          <form class="d-flex ms-auto flex-grow-1" role="search">
+    <nav class="navbar navbar-expand navbar-light bg-primary">
+      <div class="row col-md-6 offset-md-3">
+        <div class="row col-md-3">
+          <div class="col-md-2">
+            <a class="navbar-brand text-white fs-1 d-none d-md-block" href="#"
+              >UR</a
+            >
+          </div>
+          <div class="containe col-md-8 offset-md-2">
+            <div class="col-md-4">
+              <a class="navbar-brand text-white d-none d-md-block" href="#"
+                >BAN</a
+              >
+            </div>
+            <div class="col-md-4">
+              <a
+                class="navbar-brand text-warning fs-6 d-none d-md-block"
+                href="#"
+                >DICTIONARY</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active text-white" href="#">Browse</a>
+            <a class="nav-item nav-link text-white" href="#">Store</a>
+            <a class="nav-item nav-link text-white" href="#">Blog</a>
+            <a class="nav-item nav-link text-white" href="#">Advertise</a>
+          </div>
+        </div>
+        <div class="row col-md-12">
+          <form class="d-flex" role="search">
             <input
-              class="form-control me-2"
+              class="form-control flex-grow-1 me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success">Notifications</button>
+            <button class="btn btn-outline-success" type="submit">+</button>
+            <button class="btn btn-outline-success" type="submit">Q</button>
           </form>
-        </div>
-
-        <div class="collapse navbar-collapse justify-content-center">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item row justify-content-center">
-              <div class="col-sm-1">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png"
-                  class="img-fluid rounded"
-                />
-              </div>
-              <div class="col-sm-1">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png"
-                  class="img-fluid rounded"
-                />
-              </div>
-              <div class="col-sm-1">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png"
-                  class="img-fluid rounded"
-                />
-              </div>
-            </li>
-          </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Users -->
-    <div class="container mb-5 mt-5 pb-5 pt-5">
-      <div class="smaller-container">
-        <div class="row">
-          <div class="col-sm-1 mx-3">
-            <h3>Username</h3>
+    <!-- Advertisement -->
+    <div class="container mt-5">
+      <div class="banner"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+      <div class="row">
+        <div class="side-banner col-md-2 offset-md-1"></div>
+        <div class="col-md-6 card border border-primary">
+          <div class="title mt-5 text-info"><h1>Programming Socks</h1></div>
+          <div class="description mt-5">
+            <span class="text-info">Programming Socks</span> are socks that are
+            often required to perform coding. It is commonly stated that
+            programming is a equipment sport, and this is true. First guy: Hey,
+            yo, I was trying to fix atmospherics in this dumb space game I play,
+            but I couldn't figure out how to fix it in the code. Second guy:
+            Have you tried putting on your programming socks? First guy: Oh, no,
+            I probably should've of tried that earlier. First guy then puts on a
+            pair of programming socks First guy: wow this code is so easy to
+            make now!
           </div>
-          <div class="col-sm-6 text-end d-none d-lg-block">
-            <h3>...</h3>
+          <div class="author offset-md-2 mt-4">
+            by <span class="text-warning">man person</span> June 3, 2020
+          </div>
+
+          <div class="row ui-container mt-5 offset-md-1">
+            <div class="likes col-md-2">Likes</div>
+            <div class="dislikes col-md-2">Dislikes</div>
+            <div class="report col-md-5 text-end">Report</div>
           </div>
         </div>
-        <div class="row m-2">
-          <div class="col-lg-8">
-            <img
-              src="https://cdn.pixabay.com/photo/2024/02/28/07/42/european-shorthair-8601492_640.jpg"
-              alt="cat jpg"
-              class="img-fluid rounded"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="desc-container col-lg-6 mx-3 d-none d-lg-block">
-        <div class="row">
-          <div class="col-md-2">Likes</div>
-          <div class="col-md-2">Comments</div>
-          <div class="col-md-2">Shares</div>
-          <div class="col-md-6 text-end">Save</div>
-        </div>
-        <div class="description mb-5 mt-5 pb-5">
-          <span>@Username:</span> Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
+        <div class="side-banner col-md-2"></div>
       </div>
     </div>
+
     <!-- Footer -->
-    <div class="bg-primary pb-5">&copy; 2024 Instagram</div>
+    <div class="p-5 offset-md-1">
+      &copy; 1999-2024 Urban Dictionary ® adshelpprivacyterms of
+      servicedmcaaccessibility statementreport a buginformation collection
+      noticesystem statusdata subject access request
+    </div>
   </body>
 </html>
