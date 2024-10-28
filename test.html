@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>On-scroll Popup Example</title>
+    <style>
+      /* Basic styles */
+      .popup {
+        background-image: url("https://media.tenor.com/DBL4Q4H7pJ8AAAAM/cat-scary.gif"); /* Replace with your image URL */
+        background-size: cover; /* Ensure the image covers the area */
+        background-position: center;
+        display: none;
+        position: fixed;
+        top: 25%;
+        left: 25%;
+        width: 60vw;
+        height: 60vh;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Close button styles */
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .close-btn:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Page Content -->
+    <div style="height: 2000px">
+      <h1>Scroll down to see the popup!</h1>
+    </div>
+
+    <!-- Popup Element -->
+    <div id="scrollPopup" class="popup">
+      <!-- Close Button -->
+      <button class="close-btn" onclick="closePopup()">×</button>
+      <!-- Popup Content -->
+      <p>You've scrolled 50% of the page!</p>
+    </div>
+
+    <script>
+      // Function to close the popup
+      function closePopup() {
+        document.getElementById("scrollPopup").style.display = "none";
+      }
+
+      // Scroll event listener
+      window.addEventListener("scroll", () => {
+        const scrollPopup = document.getElementById("scrollPopup");
+        const scrollPercentage =
+          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
+          100;
+
+        // Show the popup after 50% scroll
+        if (scrollPercentage >= 50) {
+          scrollPopup.style.display = "flex";
+        } else {
+          scrollPopup.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -200,6 +200,35 @@
       </div>
     </div>
 
+    <div id="scrollPopup" class="popup">
+      <!-- Close Button -->
+      <button class="close-btn" onclick="closePopup()">×</button>
+      <!-- Popup Content -->
+      <p>Please DO NOT use adblock!!!</p>
+    </div>
+
+    <script>
+      // Function to close the popup
+      function closePopup() {
+        document.getElementById("scrollPopup").style.display = "none";
+      }
+
+      // Scroll event listener
+      window.addEventListener("scroll", () => {
+        const scrollPopup = document.getElementById("scrollPopup");
+        const scrollPercentage =
+          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
+          100;
+
+        // Show the popup after 50% scroll
+        if (scrollPercentage >= 50) {
+          scrollPopup.style.display = "flex";
+        } else {
+          scrollPopup.style.display = "none";
+        }
+      });
+    </script>
+
     <!-- Footer -->
     <div class="p-5 offset-md-1">
       &copy; 1999-2024 Urban Dictionary ® adshelpprivacyterms of
